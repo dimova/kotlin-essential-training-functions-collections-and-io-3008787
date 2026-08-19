@@ -14,6 +14,11 @@ fun main() {
     val formatFunction: (String, String) -> String = { first, last -> "$first $last" }
 
     printFormattedName(firstName, lastName, formatFunction)
+
+    val fancyFormatFunction: (String, String) -> String = { first, last -> "Mr. $first $last" }
+    printFormattedName(firstName, lastName, fancyFormatFunction)
+
+    printFormattedName(firstName, lastName) { first, last -> "$last, $first" }
 }
 
 fun printFormattedName(firstName: String, lastName: String, format: (String, String) -> String) {

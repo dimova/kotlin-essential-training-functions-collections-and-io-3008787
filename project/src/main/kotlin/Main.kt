@@ -2,7 +2,12 @@
 private fun printGreeting() = println("Hello Kotlin")
 
 fun main() {
-    fun getGreeting() = "Hello Kotlin"
+    //function with default parameter
+    fun getGreeting(
+        greeting: String,
+        thingToGreet: String = "World"
+    ) = "$greeting, $thingToGreet"
 
-    println(getGreeting())
+    //named argument
+    println(getGreeting("Hello", thingToGreet = "Kotlin"))
 }

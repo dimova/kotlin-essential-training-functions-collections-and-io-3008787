@@ -2,3 +2,12 @@
 node_modules
 .tmp
 npm-debug.log
+
+# Gradle / IntelliJ
+.gradle/
+build/
+.idea/
+*.iml
+
+# Local project config
+local.properties

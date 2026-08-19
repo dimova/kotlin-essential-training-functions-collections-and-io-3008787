@@ -10,6 +10,28 @@ else if (input is String) { "Input was a String with length ${input.length}" }
 else if (input == null) { "Input was null" }
 else { "Input didn't match target inputs" }
 
+fun getOutput3(input: Any?): String = when (input) {
+    is Number -> {
+        if (input !is Int) {
+            "Input was a non-Int Number"
+        } else {
+            "Input was an Int"
+        }
+    }
+
+    is String -> {
+        "Input was a String with length ${input.length}"
+    }
+
+    null -> {
+        "Input was null"
+    }
+
+    else -> {
+        "Input didn't match target inputs"
+    }
+}
+
 //rewrite the getOutput function using a when expression
 fun getOutput2(input: Any?): String {
     return when (input) {
